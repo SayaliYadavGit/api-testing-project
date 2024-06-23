@@ -1,93 +1,61 @@
-To design and implement the mock APIs as specified, we will follow these steps:
-1. API Design and Implementation
-API Endpoints and JSON Schemas
-1. User Registration: POST /users/register
-- Request:
+## API Documentation
+
+### User Registration
+- **Endpoint:** POST /users/register
+- **Request Body:**
+    ```json
     {
         "username": "string",
-        "password": "string",	
+        "password": "string",
         "email": "string"
     }
-- Response:
-    - Success:
-        {
-            "userId": "string",
-            "message": "User registered successfully"
-        }
-    - Error:
-        {
-            "error": "User already exists"
-        }
+    ```
+- **Responses:**
+    - 200: User registered successfully
+    - 400: User already exists
 
-2. User Login: POST /users/login
-- Request:
+### User Login
+- **Endpoint:** POST /users/login
+- **Request Body:**
+    ```json
     {
         "username": "string",
         "password": "string"
     }
--Response:
-    - Success:
-        {
-            "token": "string",
-            "message": "Login successful"
-        }
-    - Error:
-        {
-            "error": "Invalid username or password"
-        }
+    ```
+- **Responses:**
+    - 200: Login successful
+    - 401: Invalid username or password
 
-3. Search Books: GET /books?search=query
-- Request: (Query Parameter)
-    /books?search=string
-- Response:
-    - Success:
-        {
-            "books": [
-                {
-                    "bookId": "string",
-                    "title": "string",
-                    "author": "string",
-                    "description": "string",
-                    "price": "number"
-                }
-            ]
-        }
-    - Error:
-        {
-            "error": "No books found"
-        }
+### Search Books
+- **Endpoint:** GET /books?search=query
+- **Responses:**
+    - 200: List of books matching the search query
+    - 404: No books found
 
-4. Add to Cart: POST /users/{userId}/cart**
--Request:
+### Add to Cart
+- **Endpoint:** POST /users/{userId}/cart
+- **Request Body:**
+    ```json
     {
         "bookId": "string",
         "quantity": "number"
     }
-- Response:
-    - Success:
-        {
-            "cartId": "string",
-            "message": "Book added to cart"
-        }
-    - Error:
-        {
-            "error": "Book not found"
-        }
+    ```
+- **Responses:**
+    - 200: Book added to cart
+    - 404: Book not found
 
-5. Checkout: POST /users/{userId}/checkout**
-- Request:
+### Checkout
+- **Endpoint:** POST /users/{userId}/checkout
+- **Request Body:**
+    ```json
     {
         "paymentMethod": "string",
         "address": "string"
     }
-- Response:
-    - Success:
-        {
-            "orderId": "string",
-            "message": "Checkout successful"
-        }
-    - Error:
-        {
-            "error": "Payment declined"
-        }
-        
+    ```
+- **Responses:**
+    - 200: Checkout successful
+    - 402: Payment declined
+
