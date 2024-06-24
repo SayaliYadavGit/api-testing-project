@@ -24,6 +24,7 @@ This project demonstrates the design and implementation of mock APIs and automat
 
 3. Start the FastAPI server:
     ```bash
+    cd mock-apis/source
     uvicorn mock-apis.source.main:app --reload
     ```
 
@@ -32,13 +33,14 @@ This project demonstrates the design and implementation of mock APIs and automat
 ### Automated Tests with pytest
 Run the tests with:
 ```bash
+cd tests/integration 
 pytest test_api.py
  ```
 
 ## Project Structure
 ```bash
 /api-testing-project
-  /functions
+  /functions        # Functions used in Tests
   /mock-apis
     /source         # Source code for mock APIs
   /tests
@@ -52,6 +54,6 @@ pytest test_api.py
 
 - Run the requests to manually test the API endpoints.
 
-#####Along with this adding json file for postman Collection in main folder - api-testing-project.json
+#### Along with this adding json file for postman Collection in main folder - api-testing-project.json
 
 With this setup, you have a complete solution for mock APIs and automated testing. This project is ready for further development and integration into a CI pipeline.
