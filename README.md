@@ -2,6 +2,31 @@
 
 This project demonstrates the design and implementation of mock APIs and automated testing using FastAPI, pytest, and Postman.
 
+## Test Coverage
+User Registration:
+- Successfully registers a new user.
+- Attempts to register with an already existing username.
+- Attempts to register without providing a username.
+
+Error Handling:
+Handles "URL not found" errors.
+
+User Login:
+- Successfully logs in with valid credentials.
+- Fails to log in due to invalid credentials.
+
+Book Search:
+- Successfully searches for an available book.
+- Attempts to search for a book that is not in the catalog.
+
+Shopping Cart:
+- Successfully adds a book to the cart.
+- Fails to add a book to the cart.
+
+Checkout Process:
+- Successfully completes the checkout process.
+- Fails to complete the checkout process.
+
 ## Setup
 
 ### Prerequisites
@@ -56,4 +81,5 @@ pytest test_api.py -v
 
 #### Along with this adding json file for postman Collection in main folder - api-testing-project.json
 
+Test Cases Covered
 With this setup, you have a complete solution for mock APIs and automated testing. This project is ready for further development and integration into a CI pipeline.
