@@ -76,10 +76,12 @@ pytest test_api.py -v
 
 ## Manual Tests with Postman
 - Open Postman.
-
-- Run the requests to manually test the API endpoints.
+- Import collection with URL:
+  https://api.postman.com/collections/6929643-fcf302ba-1b33-479d-92a8-139cc3f2aa06?access_key=PMAT-01J10X3DPC185YXT491WK09SS2
 
 #### Along with this adding json file for postman Collection in main folder - api-testing-project.json
+
+- Run the requests to manually test the API endpoints.
 
 Test Cases Covered
 With this setup, you have a complete solution for mock APIs and automated testing. This project is ready for further development and integration into a CI pipeline.
