@@ -34,7 +34,7 @@ This project demonstrates the design and implementation of mock APIs and automat
 Run the tests with:
 ```bash
 cd tests/integration 
-pytest test_api.py
+pytest test_api.py -v
  ```
 
 ## Project Structure
